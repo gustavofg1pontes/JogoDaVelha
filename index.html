@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Jogo Da Velha</title>
+</head>
+
+<body>
+
+
+    <div class="titulo">
+        <img src="velha.png" alt="">
+        <h1>Jogo da Velha RÁPIDO</h1>
+        <img class="inverte" src="velha.png" alt="">
+    </div>
+
+    <div class="config">
+        <div class="telajog">
+            <h2 class="escolhejog">Quantos jogadores?</h2>
+            <input class="escolhejog" type="button" value="1 Jogador" onclick="jogadores(1)" />
+            <input class="escolhejog" type="button" value="2 Jogadores" onclick="jogadores(2)" />
+            <h3 class="escolhejog">(caso um, simulação de IA joga contra)</h3>
+        </div>
+        <div class="telasimb">
+            <h2 class="escolhesimb">Define jogador 1:</h2>
+            <input class="escolhesimb" type="button" value="X" onclick="definesimbolo('X')" />
+            <input class="escolhesimb" type="button" value="O" onclick="definesimbolo('O')" />
+        </div>
+    </div>
+
+    <div class="pag">
+        <p class="tempo">Tempo restante: 5s</p>
+
+        <img class="vitoria" src="velhafeliz.png" alt="">
+        <img class="derrota" src="velhafeliz.png" alt="">
+
+        <h3 class="mensagem">Jogo da veia 2.0</h3>
+        <span class="barra"></span>
+
+        <!--criar uma classe pra guardar todas as celulas(X e O) do jogo da velha-->
+        <div class="quadro">
+            <div class="celulas" id="00" onclick="jogar(this)"></div>
+            <div class="celulas" id="01" onclick="jogar(this)"></div>
+            <div class="celulas" id="02" onclick="jogar(this)"></div>
+            <div class="celulas" id="10" onclick="jogar(this)"></div>
+            <div class="celulas" id="11" onclick="jogar(this)"></div>
+            <div class="celulas" id="12" onclick="jogar(this)"></div>
+            <div class="celulas" id="20" onclick="jogar(this)"></div>
+            <div class="celulas" id="21" onclick="jogar(this)"></div>
+            <div class="celulas" id="22" onclick="jogar(this)"></div>
+        </div>
+
+
+        <input class="resetar" type="button" value="Resetar" onclick="reset()">
+
+    </div>
+
+    <div class="nome1">
+        <input id="nomejog1" name="nome1" class="nomejog1" type="text" required>
+        <label for="nomejog1">Nome Jogador 1</label>
+    </div>
+    <div class="nome2">
+        <input id="nomejog2" name="nome2" class="nomejog2" type="text" required>
+        <label for="nomejog2">Nome Jogador 2</label>
+    </div>
+    
+    
+    <script src="./script.js"></script>
+</body>
+
+</html>

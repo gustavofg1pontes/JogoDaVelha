@@ -1,0 +1,210 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+
+body {
+    background: linear-gradient(90deg, black, rgb(0, 0, 53));
+}
+
+input[type="button"] {
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+input[type="button"]:hover {
+    border: 1px solid black;
+    transform: scale(1.1);
+}
+
+.config {
+    position: absolute;
+    text-align: center;
+    margin-left: 37.5vw;
+    margin-top: 10vh;
+    width: 25vw;
+    height: 25vh;
+    background-color: #483D8B;
+    opacity: 1;
+    z-index: 1;
+    border-radius: 20px;
+    box-shadow: 0 0 1em rgb(77, 76, 76);
+}
+
+.telasimb {
+    display: none;
+}
+
+.inverte {
+    transform: scaleX(-1);
+}
+
+.titulo img {
+    width: 6vw;
+}
+
+.titulo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(17, 0, 63);
+    box-shadow: 0 0 2em black;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    opacity: 0.2;
+}
+
+.pag {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    opacity: 0.2;
+}
+
+.mensagem {
+    margin: 0 auto;
+    font-size: 1.8em;
+}
+
+.barra {
+    margin: 0 auto;
+    width: 0px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.tempo{
+    position: absolute;
+    top: 79vh;
+    left: 43vw;
+    font-size: 2em;
+}
+
+.quadro {
+    display: grid;
+    margin: 0px auto;
+    margin-top: 10vh;
+    margin-bottom: 15vh;
+    width: 22vw;
+    height: 22vw;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 0.5vw;
+    row-gap: 0.5vw;
+    justify-content: center;
+    align-content: center;
+    background-color: black;
+}
+
+.celulas {
+    text-align: center;
+    width: 7vw;
+    height: 7vw;
+    justify-content: center;
+    font-size: 4.5em;
+    align-items: center;
+    cursor: pointer;
+    background-color: #483D8B;
+}
+
+.vitoria, .derrota {
+    margin-left: 20%;
+    top: 40vh;
+    position: absolute;
+    width: 10%;
+    transition: 1s;
+    opacity: 0; 
+    animation: rodando 2s linear infinite;
+}
+.derrota{
+    right: 20%;
+}
+.nome1 {
+    position: absolute;
+    top: 30vh;
+    left: 10vw;
+}
+.nome2{
+    transition: .7s;
+    opacity: 0;
+    position: absolute;
+    top: 30vh;
+    right: 10vw;
+}
+
+
+input[type="text"] {
+    height: 5vh;
+    width: 20vw;
+    font-size: 1em;
+    color: #fff;
+    border: none;
+    border-bottom: 3px solid #fff;
+    border-radius: 5px;
+    outline: none;
+    background: transparent;
+}
+
+label {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    font-size: 2em;
+    transition: .3s;
+}
+
+input:valid+label,
+input:focus+label {
+    transform: translateY(-100%);
+    font-size: 1em;
+}
+input:focus,
+input:valid{
+    border-bottom: 3px solid rgb(143, 3, 3);
+}
+
+.resetar {
+    margin: 0 auto;
+}
+
+
+
+@keyframes rodando {
+    25% {
+        transform: scaleX(-1);
+    }
+
+    50% {
+        transform: scaleX(-1);
+    }
+
+    75% {
+        transform: scaleX(1);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes barrinha {
+    0% {
+        width: 0px;
+    }
+
+    90% {
+        width: 250px;
+        opacity: 1;
+    }
+
+    100% {
+        width: 250px;
+        opacity: 0;
+    }
+}
